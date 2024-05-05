@@ -105,13 +105,13 @@ const downloadButton = document.getElementById('downloadButton');
 
 downloadButton.addEventListener('click', async () => {
     try {
-        const response = await fetch('Documentation/AdvancedBuildingSystem_0.0.1_Draft.pdf');
+        const response = await fetch('Documentation/AdvancedBuildingSystem_1.0.0.pdf');
         const blob = await response.blob();
         const url = window.URL.createObjectURL(blob);
 
         const downloadLink = document.createElement('a');
         downloadLink.href = url;
-        downloadLink.download = 'AdvancedBuildingSystem_0.0.1_Draft.pdf';
+        downloadLink.download = 'AdvancedBuildingSystem_1.0.0.pdf';
         downloadLink.click();
 
         window.URL.revokeObjectURL(url);
